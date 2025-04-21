@@ -44,7 +44,6 @@ public class MyProducerConf {
         //2. 创建kafka 生产者对象
         KafkaProducer kafkaProducer = new KafkaProducer<>(properties);
 
-
         //3. 发送消息
         for (int i = 0; i < 10 ; i++) {
             kafkaProducer.send(new ProducerRecord<String, String>("topic-ideal","jeffrey" + i));
